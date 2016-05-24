@@ -1,0 +1,18 @@
+* block symbol definitions
+.subckt ishibeesd Dsw1 Dsw2 Dsw3 Dsw4 Dsw5 Dsw6 VDD Vinop1+ Vinop1- Vinop2+ Vinop2- Vbiasop1 Vbiasop2 Vind1 Vinoutd2 VN Voutd1 Voutop1 Voutop2
+R5 VN VDD 10k
+R6 0 VN 10k
+XX2 Dsw2 VDD N003 N005 invsw
+XX3 Dsw1 VDD N001 N002 invsw
+XX4 Dsw3 VDD N007 N009 invsw
+R7 Vbiasop2 VDD 100k
+XX5 Dsw5 VDD N012 N014 invsw
+XX6 Dsw4 VDD N010 N011 invsw
+XX7 Dsw6 VDD N016 N018 invsw
+R10 Vbiasop1 VDD 100k
+R11 Vinop1+ VN 900k
+XX1 Vinop1- Vinop1+ Voutop1 VDD Vbiasop1 opamp3u
+XX10 Vinop2- Vinop2+ Voutop2 VDD Vbiasop2 opamp3u
+XX8 VDD N002 N001 N005 N003 N009 N007 Vind1 Voutd1 N004 N006 N008 distotiondevice1esd
+XX9 VDD N011 N010 N014 N012 N018 N016 VN Vinoutd2 N013 N015 N017 distotiondevice1esd
+.ends ishibeesd

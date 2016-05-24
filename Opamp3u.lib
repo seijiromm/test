@@ -1,0 +1,22 @@
+.subckt opamp3u Vin- Vin+ Vout VDD Vbias
+M1 VDD N001 N002 VDD pch l=3u w=150u ad=1.05e-9 as=1.05e-9 pd=164e-6 ps=164e-6
+M2 VDD N001 Vout VDD pch l=3u w=150u ad=1.05e-9 as=1.05e-9 pd=164e-6 ps=164e-6 m=2
+M3 N002 Vin- N004 N002 pch l=3u w=75u ad=5.25e-10 as=5.25e-10 pd=89e-6 ps=89e-6
+M4 N002 N003 N003 N002 pch l=2u w=75u ad=5.25e-10 as=5.25e-10 pd=89e-6 ps=89e-6
+M5 VDD N001 N001 VDD pch l=3u w=150u ad=1.05e-9 as=1.05e-9 pd=164e-6 ps=164e-6
+M6 N002 Vin+ N005 N002 pch l=3u w=75u ad=5.25e-10 as=5.25e-10 pd=89e-6 ps=89e-6
+M7 N005 N006 N007 N005 pch l=4u w=75u ad=5.25e-10 as=5.25e-10 pd=89e-6 ps=89e-6
+M8 N004 N006 N008 N004 pch l=4u w=75u ad=5.25e-10 as=5.25e-10 pd=89e-6 ps=89e-6
+M9 N007 N008 N011 0 nch l=3u w=50u ad=3.5e-10 as=3.5e-10 pd=64e-6 ps=64e-6
+M10 N011 N010 0 0 nch l=3u w=50u ad=3.5e-10 as=3.5e-10 pd=64e-6 ps=64e-6
+M11 N008 N008 N010 0 nch l=3u w=50u ad=3.5e-10 as=3.5e-10 pd=64e-6 ps=64e-6
+M12 N010 N010 0 0 nch l=3u w=50u ad=3.5e-10 as=3.5e-10 pd=64e-6 ps=64e-6
+M13 VDD N007 N009 0 nch l=3u w=50u ad=3.5e-10 as=3.5e-10 pd=64e-6 ps=64e-6
+M14 N009 N010 0 0 nch l=3u w=50u ad=3.5e-10 as=3.5e-10 pd=64e-6 ps=64e-6
+M15 Vout N009 0 0 nch l=3u w=300u ad=2.1e-9 as=2.1e-9 pd=314e-6 ps=314e-6
+C1 N007 Vout 3p
+M16 N006 Vbias 0 0 nch l=3u w=50u ad=3.5e-10 as=3.5e-10 pd=64e-6 ps=64e-6
+M17 N001 Vbias 0 0 nch l=3u w=100u ad=7e-10 as=7e-10 pd=114e-6 ps=114e-6
+M18 Vbias Vbias 0 0 nch l=3u w=100u ad=7e-10 as=7e-10 pd=114e-6 ps=114e-6
+M19 N003 N006 N006 N003 pch l=2u w=75u ad=5.25e-10 as=5.25e-10 pd=89e-6 ps=89e-6
+.ends opamp3u

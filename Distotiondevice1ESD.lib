@@ -1,0 +1,20 @@
+.subckt distotiondevice1esd Vddin Vsw1+ Vsw1- Vsw2+ Vsw2- Vsw3+ Vsw3- Vd1 Vd2 Vmoni1 Vmoni2 Vmoni3
+M1 Vd1 Vd1 Vmoni3 0 nch l=2u w=200u ad=1.4e-9 as=1.4e-9 pd=214e-6 ps=214e-6
+M2 Vmoni3 Vmoni3 Vd1 0 nch l=2u w=200u ad=1.4e-9 as=1.4e-9 pd=214e-6 ps=214e-6
+M3 Vd1 Vmoni2 Vmoni2 Vddin pch l=2u w=150u ad=1.05e-9 as=1.05e-9 pd=164e-6 ps=164e-6
+M4 Vmoni2 Vd1 Vd1 Vddin pch l=2u w=150u ad=1.05e-9 as=1.05e-9 pd=164e-6 ps=164e-6
+M7 Vmoni1 Vsw1+ Vd2 Vddin pch l=2u w=150u ad=1.05e-9 as=1.05e-9 pd=164e-6 ps=164e-6
+M5 Vmoni1 Vmoni1 Vd1 Vmoni1 pch l=2u w=100u ad=7e-10 as=3.5e-10 pd=114e-6 ps=64e-6
+M6 Vd1 Vd1 Vmoni1 Vd1 pch l=2u w=100u ad=7e-10 as=3.5e-10 pd=114e-6 ps=64e-6
+M8 Vmoni1 Vsw1- Vd2 0 nch l=2u w=150u ad=1.05e-9 as=1.05e-9 pd=164e-6 ps=164e-6
+M9 Vmoni2 Vsw2+ Vd2 Vddin pch l=2u w=150u ad=1.05e-9 as=1.05e-9 pd=164e-6 ps=164e-6
+M10 Vmoni2 Vsw2- Vd2 0 nch l=2u w=150u ad=1.05e-9 as=1.05e-9 pd=164e-6 ps=164e-6
+M11 Vmoni3 Vsw3+ Vd2 Vddin pch l=2u w=150u ad=1.05e-9 as=1.05e-9 pd=164e-6 ps=164e-6
+M12 Vmoni3 Vsw3- Vd2 0 nch l=2u w=150u ad=1.05e-9 as=1.05e-9 pd=164e-6 ps=164e-6
+M13 Vd1 Vsw1- Vmoni1 Vddin pch l=2u w=10u ad=7e-11 as=7e-11 pd=24u ps=24u
+M14 Vd1 Vsw1+ Vmoni1 0 nch l=2u w=6u ad=4.2e-11 as=4.2e-11 pd=20u ps=20u
+M15 Vd1 Vsw2- Vmoni2 Vddin pch l=2u w=10u ad=7e-11 as=7e-11 pd=24u ps=24u
+M16 Vd1 Vsw2+ Vmoni2 0 nch l=2u w=6u ad=4.2e-11 as=4.2e-11 pd=20u ps=20u
+M17 Vd1 Vsw3- Vmoni3 Vddin pch l=2u w=10u ad=7e-11 as=7e-11 pd=24u ps=24u
+M18 Vd1 Vsw3+ Vmoni3 0 nch l=2u w=6u ad=4.2e-11 as=4.2e-11 pd=20u ps=20u
+.ends distotiondevice1esd
